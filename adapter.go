@@ -1,4 +1,4 @@
-package router
+package qrouter
 
 import "net/http"
 

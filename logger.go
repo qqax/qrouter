@@ -1,4 +1,4 @@
-package router
+package qrouter
 
 import (
 	"github.com/fatih/color"
