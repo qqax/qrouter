@@ -14,7 +14,7 @@ type Endpoint struct {
 	paths      []string
 }
 
-func initApi(mux *http.ServeMux, path string, middleware ...Adapter) *Endpoint {
+func InitApi(mux *http.ServeMux, path string, middleware ...Adapter) *Endpoint {
 	return &Endpoint{
 		mux:        mux,
 		middleware: middleware,
