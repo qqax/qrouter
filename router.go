@@ -116,6 +116,6 @@ func (ph PathHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		fallthrough
 
 	default:
-		writeJSONError(w, "Method not allowed", http.StatusMethodNotAllowed)
+		WriteJSONError(w, "Method not allowed", http.StatusMethodNotAllowed)
 	}
 }
