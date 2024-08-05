@@ -21,7 +21,7 @@ func InitApi(mux *http.ServeMux, path string, middleware ...Adapter) *Endpoint {
 		paths:      []string{path},
 	}
 }
-func (e *Endpoint) group(path string, middleware ...Adapter) *Endpoint {
+func (e *Endpoint) Group(path string, middleware ...Adapter) *Endpoint {
 	ep := new(Endpoint)
 	ep.mux = e.mux
 	ep.middleware = append(e.middleware, middleware...)
@@ -54,7 +54,7 @@ func (ph PathHandler) log(pattern string) {
 	log.Info().Msgf("endpoint: %-40s methods: %s", pattern, strings.Join(methods, " "))
 }
 
-func (e *Endpoint) handle(h ...PathHandler) {
+func (e *Endpoint) Handle(h ...PathHandler) {
 	for _, handler := range h {
 		pattern := e.endpoint(handler.Path)
 		handler.log(pattern)

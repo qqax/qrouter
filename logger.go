@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-func requestLogger(next http.Handler) http.Handler {
+func RequestLogger(next http.Handler) http.Handler {
 	h := hlog.NewHandler(log.Logger)
 
 	accessHandler := hlog.AccessHandler(
