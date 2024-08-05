@@ -1,4 +1,4 @@
-module github.com/qqax/qmailer
+module github.com/qqax/qrouter
 
 go 1.21
 
